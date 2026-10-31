@@ -1,0 +1,38 @@
+:root {
+  font-family: Arial, sans-serif;
+  color: #222;
+  background: #fff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.site-header,
+.site-main,
+.site-footer {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 1.5rem;
+}
+
+.site-title {
+  color: inherit;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.site-main {
+  min-height: 70vh;
+}
+
+.site-footer {
+  border-top: 1px solid #ddd;
+  color: #666;
+  font-size: 0.875rem;
+}
