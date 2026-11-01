@@ -1,7 +1,7 @@
 :root {
+  color: #23332f;
+  background: #f2f5ef;
   font-family: Arial, sans-serif;
-  color: #222;
-  background: #fff;
 }
 
 * {
@@ -10,51 +10,123 @@
 
 body {
   margin: 0;
-}
-
-.site-header,
-.site-main,
-.site-footer {
-  margin: 0 auto;
-  max-width: 1200px;
-  padding: 1.5rem;
-}
-
-.site-title {
-  color: inherit;
-  font-size: 1.25rem;
-  font-weight: 700;
-  text-decoration: none;
+  min-height: 100vh;
 }
 
 .site-main {
-  min-height: 70vh;
+  margin: 0 auto;
+  max-width: 760px;
+  min-height: calc(100vh - 76px);
+  padding: 9rem 1.5rem 5rem;
 }
 
-.site-main h1 {
-  margin-bottom: 1rem;
+.eyebrow,
+.card-label {
+  color: #37816d;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
 }
 
-.site-main p {
-  min-height: 1.5rem;
+.eyebrow {
+  margin-bottom: 1.5rem;
+}
+
+h1 {
+  font-size: clamp(3.5rem, 9vw, 6.5rem);
+  letter-spacing: -0.08em;
+  line-height: 0.9;
+  margin: 0;
+}
+
+h1 span {
+  color: #37816d;
+}
+
+.intro {
+  color: #687671;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 2rem 0 3rem;
+  max-width: 430px;
+}
+
+.generator-card {
+  background: #fff;
+  border: 1px solid #dfe7df;
+  border-radius: 0.75rem;
+  box-shadow: 0 1.5rem 3rem rgba(35, 51, 47, 0.08);
+  padding: 2rem;
+}
+
+.card-label {
+  border-bottom: 1px solid #e6ece6;
+  padding-bottom: 1rem;
+}
+
+#project-idea {
+  font-size: clamp(1.25rem, 3vw, 1.65rem);
+  line-height: 1.4;
+  margin: 2rem 0;
+  min-height: 4.7rem;
 }
 
 #generate-button {
-  background: #222;
+  align-items: center;
+  background: #23332f;
   border: 0;
-  border-radius: 0.25rem;
+  border-radius: 0.35rem;
   color: #fff;
   cursor: pointer;
-  font-size: 1rem;
-  padding: 0.75rem 1rem;
+  display: flex;
+  font-size: 0.95rem;
+  font-weight: 700;
+  justify-content: space-between;
+  padding: 1rem 1.15rem;
+  transition: background 160ms ease, transform 160ms ease;
+  width: 100%;
+}
+
+#generate-button span {
+  color: #9ee0c6;
+  font-size: 1.35rem;
+}
+
+#generate-button:hover,
+#generate-button:focus-visible {
+  background: #37816d;
 }
 
 #generate-button:hover {
-  background: #444;
+  transform: translateY(-2px);
+}
+
+#generate-button:focus-visible {
+  outline: 3px solid #9ee0c6;
+  outline-offset: 3px;
 }
 
 .site-footer {
-  border-top: 1px solid #ddd;
-  color: #666;
-  font-size: 0.875rem;
+  border-top: 1px solid #dfe7df;
+  color: #82908b;
+  font-size: 0.8rem;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.site-footer span {
+  color: #37816d;
+  font-weight: 700;
+}
+
+@media (max-width: 520px) {
+  .site-main {
+    min-height: calc(100vh - 70px);
+    padding-top: 5rem;
+  }
+
+  .generator-card {
+    padding: 1.5rem;
+  }
 }
